@@ -1,0 +1,87 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-12"><app-corrousel style="padding-bottom: 5%;"></app-corrousel></div>
+      </div>
+    <div class="row">
+        <h1 class="center_element">Characters</h1>
+
+    </div>
+
+    <div class="row">
+        <div class="filter-container p-3 mb-4 border rounded">
+            <div class="row align-items-center">
+              <!-- Dropdowns -->
+              <div class="col-md-2 mb-2">
+                Status
+                <select [(ngModel)]="status" class="form-select filter-dropdown" aria-label="Status" (change)="filter()">
+                  <option value="alive">Alive</option>
+                  <option value="dead">Dead</option>
+                  <option value="unknown">Unknown</option>
+                </select>
+              </div>
+              <div class="col-md-2 mb-2">
+                Gender
+                <select [(ngModel)]="gender" class="form-select filter-dropdown" aria-label="Gender" aria-placeholder="Gender" (change)="filter()">
+                
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Unknown">Unknown</option>
+                </select>
+              </div>
+              <div class="col-md-2 mb-2">
+                Specie
+                <select [(ngModel)]="specie" class="form-select filter-dropdown" aria-label="Specie" (change)="filter()">
+                  <option value="Human">Human</option>
+                  <option value="Alien">Alien</option>
+                  <option value="Robot">Robot</option>
+                </select>
+              </div>
+              <!-- Search bar -->
+              <div class="col-md-4 mb-2">
+                Name
+                <input [(ngModel)]="name" type="text" class="form-control" (input)="filter()">
+              </div>
+              <!-- Delete Filters Button -->
+              <div class="col-md-2 mb-2 text-end">
+                <button class="btn btn-danger delete-filters-btn" (click)="removeFilter()">Delete Filters</button>
+              </div>
+            </div>
+          </div>
+                 
+    </div>
+    @if (load) {
+        <app-loader class="center_element" style="width: 100%; height: 100%;"></app-loader>
+    }
+    @else {
+    <div class="row  row-cols-1 row-cols-md-4 g-4">
+        @for (character of characters; track $index) {
+            <div class="col">
+                <div [ngClass]="getClass(character.status)" >
+                  <img src="{{character.image}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{character.name}}</h5>
+                    <p class="card-text">status: {{character.status}}</p>
+                    <p class="card-text">specie: {{character.species}}</p> 
+                    <p class="card-text">gender: {{character.gender}}</p>
+                    <a routerLink="personaje/{{character.id}}">
+                        <button class="btn btn-secondary">see more</button>
+                    </a>
+                    
+                  </div>
+                </div>
+              </div>
+        }
+    </div>
+    <div class="row">
+        <div class="center_element">
+        @if (page>=maxPage) {
+            
+        }
+        @else {
+            <button class="btn btn-dark" (click)="getMoreData()">load more</button>
+        }   
+        </div>
+    </div>
+}
+</div>

@@ -1,0 +1,11 @@
+.card {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  .card a {
+    color: #66ff66;
+  }
+  .card a:hover {
+    color: #99ff99;
+  }
+  
