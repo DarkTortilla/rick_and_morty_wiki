@@ -26,11 +26,21 @@ export class GetApiDataService {
     return this.httpService.get(this.apiUrl+'/character/'+data)
   }
  
-
   getSingleCharacter(id:number):Observable<any>{
     return this.httpService.get(this.apiUrl+'/character/'+id)
   }
   
+ getPlaces(id:number):Observable<any>{
+    return this.httpService.get(this.apiUrl+'/location?page='+id)
+  }
+  getSinglePlace(id:number):Observable<any>{
+    return this.httpService.get(this.apiUrl+'/location/'+id)
+  }
 
+  getEpisodes(page:number):Observable<any>{
+    return this.httpService.get(this.apiUrl+'/episode?page='+page)
+  }
+  getSingleEpisodie(){
 
+  }
 }

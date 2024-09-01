@@ -1,10 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #333; 
-    color: #FFF; 
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; 
+    background-color: #111;
+    color: #fff; 
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; 
   }
   .center_element{
     display: flex; 
@@ -12,4 +11,80 @@ body {
     align-items: center; 
     height:15vh;
   }
+  app-card {
+    justify-content: center;
+    background-color: #333;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #00ff00;
+}
+ 
+
+a {
+  color: #00ff00; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff00ff; 
+}
+/*botones*/
+button {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-dark {
+  background-color: #221; 
+  color: #00ff00; 
+}
+
+.btn-dark:hover {
+  background-color: #00ff00; 
+  color: #000; 
+}
+/*table*/
+
+.tabl-container {
+  margin: 20px;
+}
+
+.tabl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: large;
+}
+
+.tabl th,
+.tabl td {
+  color: #00ff00;
+  text-shadow: 2px 2px 5px #00ff00;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tabl tr:hover {
+  background-color: #ffff00;
   
+  
+  th,td{
+      color: black;
+      text-shadow: #dee2e6;
+  }
+  
+}
+
+.tabl thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tabl tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}

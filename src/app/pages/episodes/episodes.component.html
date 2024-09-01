@@ -1,1 +1,45 @@
-<p>episodes works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12"><app-corrousel style="padding-bottom: 5%;"></app-corrousel></div>
+    </div>
+    <div class="row">
+        <h1 class="center_element">Episodes</h1>
+
+    </div>
+
+    @if (load) {
+    <app-loader class="center_element"></app-loader>
+    }@else {
+    <table class="tabl">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Air Date</th>
+                <th>Episode</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @for (ep of episodes; track $index) {
+            <tr>
+                <td>{{ep.name}}</td>
+                <td>{{ep.air_date}}</td>
+                <td>{{ep.episode}}</td>
+                <td>{{ep.created | date}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+    <div class="row">
+        <div class="center_element">
+            @if (page>=max) {
+
+            }
+            @else {
+            <button class="btn btn-dark" (click)="getMoreEpisodes()">load more</button>
+            }
+        </div>
+    </div>
+</div>

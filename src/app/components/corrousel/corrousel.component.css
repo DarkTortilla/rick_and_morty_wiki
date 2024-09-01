@@ -2,3 +2,57 @@ img{
     height: 700px;
     object-fit: cover;
 }
+.carousel-caption h1 {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Cartoon', sans-serif; 
+    color: #00ff00; 
+    text-shadow: 2px 2px 5px #00ff00;
+}
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+    filter: grayscale(20%);
+    border: 5px solid #00ff00;
+    border-radius: 10px;
+}
+
+.btn-outline-primary {
+    border-color: #ffcc00;
+    color: #ffcc00;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.btn-group-lg .btn {
+    margin: 0 5px;
+}
+
+.carousel-indicators button {
+    background-color: #00ff00;
+}
+
+.center_element {
+    text-align: center;
+}
+
+.container {
+    background-color: #111;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #00ff00;
+}

@@ -6,14 +6,13 @@ import { CorrouselComponent } from '../../components/corrousel/corrousel.compone
 import { FormsModule } from '@angular/forms';
 import { query } from 'express';
 import { LoaderComponent } from '../../components/loader/loader.component';
+import { CaracterComponent } from '../caracter/caracter.component';
+import { CardComponent } from '../../components/card/card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-
-
-
-  imports: [NgClass, RouterLink, CorrouselComponent, FormsModule, LoaderComponent],
+  imports: [NgClass, RouterLink, CorrouselComponent, FormsModule, LoaderComponent, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -60,19 +59,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getClass(value: string): string {
-    //console.log(value)
-    switch (value) {
-      case 'Alive':
-        return 'card text-bg-dark';
-      case 'Dead':
-        return 'card text-bg-danger';
-      case 'unknown':
-        return 'card text-bg-warning';
-      default:
-        return 'card text-secondary';
-    }
-  }
+
   filter() {
     this.load = true
     this.characters = []

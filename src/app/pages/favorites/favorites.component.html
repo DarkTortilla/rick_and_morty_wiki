@@ -8,20 +8,7 @@
         @if(!load){
         <div class="row  row-cols-1 row-cols-md-4 g-4">
             @for (character of characters; track $index) {
-            <div class="col">
-                <div class="card text-bg-dark">
-                    <img src="{{character.image}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{character.name}}</h5>
-                        <p class="card-text">status: {{character.status}}</p>
-                        <p class="card-text">specie: {{character.species}}</p>
-                        <p class="card-text">gender: {{character.gender}}</p>
-                        <a routerLink="/personaje/{{character.id}}">
-                            <button class="btn btn-secondary">see more</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <app-card [character]="character"></app-card>
             }
         </div>
         }

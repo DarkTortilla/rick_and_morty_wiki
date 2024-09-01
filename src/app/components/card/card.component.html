@@ -1,1 +1,15 @@
-<p>card works!</p>
+<div class="col my-card">
+    <div [ngClass]="getClass(character.status)" >
+      <img src="{{character.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{character.name}}</h5>
+        <p class="card-text">status: {{character.status}}</p>
+        <p class="card-text">specie: {{character.species}}</p> 
+        <p class="card-text">gender: {{character.gender}}</p>
+        <a routerLink="/personaje/{{character.id}}">
+            <button class="btn btn-secondary">see more</button>
+        </a>
+        
+      </div>
+    </div>
+  </div>

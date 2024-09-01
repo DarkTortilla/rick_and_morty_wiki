@@ -1,1 +1,45 @@
-<p>places works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12"><app-corrousel style="padding-bottom: 5%;"></app-corrousel></div>
+    </div>
+    <div class="row">
+        <h1 class="center_element">Places</h1>
+
+    </div>
+
+    @if (load) {
+    <app-loader class="center_element"></app-loader>
+    }@else {
+    <table class="tabl">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Dimension</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            @for (place of places; track $index) {
+            <tr>
+                <td>{{place.name}}</td>
+                <td>{{place.type}}</td>
+                <td>{{place.dimension}}</td>
+                <td>{{place.created | date}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    }
+    <div class="row">
+        <div class="center_element">
+            @if (page>=maxPage) {
+
+            }
+            @else {
+            <button class="btn btn-dark" (click)="getMorePlaces()">load more</button>
+            }
+        </div>
+    </div>
+</div>
