@@ -1,7 +1,8 @@
-img{
+img {
     height: 700px;
     object-fit: cover;
 }
+
 .carousel-caption h1 {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
@@ -20,15 +21,15 @@ img{
 }
 
 .btn-outline-primary {
-    border-color: #ffcc00;
-    color: #ffcc00;
+    border-color: #00ff00; 
+    color: #00ff00; 
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.3s;
 }
 
 .btn-outline-primary:hover {
-    background-color: #ffcc00;
+    background-color: #00ff00; 
     color: #000;
 }
 
@@ -42,7 +43,7 @@ img{
 }
 
 .carousel-indicators button {
-    background-color: #00ff00;
+    background-color: #00ff00; 
 }
 
 .center_element {
@@ -50,8 +51,8 @@ img{
 }
 
 .container {
-    background-color: #111;
-    border: 2px solid #00ff00;
+    background-color: #111; 
+    border: 2px solid #00ff00; 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 15px #00ff00;

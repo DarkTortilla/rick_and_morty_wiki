@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   characters: any[] = [];
   data: any;
   load: boolean = true;
+  msgError:string=''
 
   //-----filter
   gender: string = '';
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   getDataCharacters() {
+    this.msgError=''
     console.log(this.page)
     this.dataService.getCharacters(this.page, this.gender, this.status, this.name, this.specie).subscribe(
       response => {
@@ -46,6 +48,7 @@ export class HomeComponent implements OnInit {
       error => {
         console.log(error)
         this.load = false
+        this.msgError=error.error.error;
       }
     )
 

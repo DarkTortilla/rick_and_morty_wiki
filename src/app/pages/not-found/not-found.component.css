@@ -1,0 +1,44 @@
+.not-found-container {
+    background-color: #111; 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00ff00; 
+    text-shadow: 2px 2px 10px #00ff00; 
+}
+
+p {
+    font-size: 1.5rem;
+    color: #fff; 
+}
+
+img {
+    max-width: 80%; 
+    margin: 20px 0; 
+}
+
+.btn {
+    background-color: #00ff00;
+    color: #000; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff00ff; 
+    color: #fff; 
+}
+
+.link {
+    color: #00ff00; 
+}

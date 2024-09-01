@@ -40,7 +40,8 @@ export class GetApiDataService {
   getEpisodes(page:number):Observable<any>{
     return this.httpService.get(this.apiUrl+'/episode?page='+page)
   }
-  getSingleEpisodie(){
-
+  getSetEpisodes(data:string):Observable<any>{
+    return this.httpService.get(this.apiUrl+'/episode/'+data)
   }
+ 
 }

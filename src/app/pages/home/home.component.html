@@ -54,6 +54,7 @@
     @if (load) {
         <app-loader class="center_element" style="width: 100%; height: 100%;"></app-loader>
     }
+    
     @else {
     <div class="row  row-cols-1 row-cols-md-4 g-4">
         @for (character of characters; track $index) {
@@ -70,5 +71,8 @@
         }   
         </div>
     </div>
+    @if (msgError!=='') {
+        <h1>{{msgError}}</h1>
+    }
 }
 </div>

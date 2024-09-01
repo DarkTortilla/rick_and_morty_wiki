@@ -1,11 +1,86 @@
 .card {
-    background-color: #1e1e1e;
-    color: white;
-  }
-  .card a {
-    color: #66ff66;
-  }
-  .card a:hover {
-    color: #99ff99;
-  }
-  
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  border: 2px solid #00ff7f; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-img {
+  border: 2px solid #00ff7f; 
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 16px;
+  border-left: 2px solid #00ff7f; 
+}
+
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  color: #00bfa5;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.card-text {
+  font-family: 'Roboto', sans-serif;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+  border: 2px solid #00ff7f; 
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.card-text strong {
+  color: #00bfa5;
+}
+
+.card a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: #26a69a;
+  text-decoration: underline;
+}
+
+.btn-success, .btn-danger {
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+
+}
+
+
+
+
+
+
+
+.pagination .page-link {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+  border: 1px solid #6c757d; /* Borde gris */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff; /* Fondo azul para la página activa */
+  border-color: #007bff; /* Borde azul para la página activa */
+}
+
+.pagination .page-link:hover {
+  background-color: #495057; /* Fondo gris oscuro al pasar el ratón */
+  color: #ffffff; /* Texto claro */
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #6c757d; /* Fondo gris para páginas deshabilitadas */
+  color: #ffffff; /* Texto claro */
+  border-color: #6c757d; /* Borde gris */
+}

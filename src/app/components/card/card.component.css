@@ -1,5 +1,11 @@
 .my-card {
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 5px #dee2e6;
+    h5{
+      text-decoration: underline;
+
+    }
+    
   }
   
   .my-card:hover {

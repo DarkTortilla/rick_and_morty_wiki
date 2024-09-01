@@ -6,9 +6,9 @@ h1.center_element {
 
 .filter-container {
     background-color: #222;
-    border: 2px solid #00ff00;
+    /*border: 2px solid #00ff00;*/
     border-radius: 10px;
-    box-shadow: 0px 0px 15px #00ff00;
+    /*box-shadow: 0px 0px 15px #00ff00;*/
 }
 
 .filter-dropdown {
@@ -49,10 +49,10 @@ h1.center_element {
 
 .container {
     background-color: #111;
-    border: 2px solid #00ff00;
+   /* border: 2px solid #00ff00;*/
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 15px #00ff00;
+   /* box-shadow: 0px 0px 15px #00ff00*/;
 }
 
 h1 {

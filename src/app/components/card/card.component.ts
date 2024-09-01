@@ -17,13 +17,13 @@ export class CardComponent {
     //console.log(value)
     switch (value) {
       case 'Alive':
-        return 'card text-bg-dark';
+        return 'card border-success text-bg-dark';
       case 'Dead':
-        return 'card text-bg-danger';
+        return 'card border-danger text-bg-dark';
       case 'unknown':
-        return 'card text-bg-warning';
+        return 'card border-warning text-bg-dark';
       default:
-        return 'card text-secondary';
+        return 'card border-secondary text-bg-dark';
     }
   }
 }
